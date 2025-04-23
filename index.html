@@ -19,7 +19,7 @@
   <link href="common/style_v5.css" rel="stylesheet" type="text/css">
   <link href="./quickX.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./animate.css" type="text/css">
-  <style>
+ <style>
     .caret-off::after {
       visibility: hidden;
     }
@@ -30,20 +30,20 @@
     }
 
     .radius50p {
-      border-radius:11px;
-      ;
+      border-radius:4px;
+      box-shadow: 0 2px 4px #00000082;
     }
 
     .call2Action {
       background-color: #00ca6a;
-      border-color: #f7f7f763;
-      color: white;
+      /* border-color: #ffffff;
+      color: white; */
       /* box-shadow: 1px 1px 0px 0px #7dcdad; */
     }
 
     .c2Apremium {
-      background-color: rgb(10 20 1 / 37%);
-      border-color: #f7f7f78c;
+      background-color: rgba(0, 0, 0, 0.37);
+      /* border-color: #ffffff; */
     }
 
     @keyframes shadowAnim {
@@ -63,16 +63,28 @@
 </head>
 <!----( FASHION )(SMALL BUSINESS) (TBD)--->
 
-<body class="text_intact" style="line-height: 1.2;font-family: Roboto, Arial, Georgia, serif;font-size: 18px;background-color: #000;">
+<body class="text_intact" style="line-height: 1.2;font-family: Roboto, Arial, Georgia, serif;font-size: 18px;background-color: #FFF;">
   <!-- modal disable keyboard esc and outside click closure of modal add data-backdrop="static" data-keyboard="false"  -->
-  <div class="modal mx-auto" id="myModal" tabindex="-1" role="dialog" aria-labelledby="dynamicModal" style="z-index:5000;display:none;transition:opacity 5ms linear;background-color:#000" aria-hidden="true">
+  <div class="modal mx-auto" id="myModal" tabindex="-1" role="dialog" aria-labelledby="dynamicModal" style="z-index:5000;display:none;transition:opacity 5ms linear;background-color:rgb(0 0 0 / 52%)" aria-hidden="true">
     <div id="dialogueWidth" class="modal-dialog mx-auto fs_modalWidth">
-      <div id="modContent" class="modal-content" style="border-radius: 8px;border:5px solid #15d0f1;outline: 4px solid white;">
-        <div class="modal-header" style="padding:.2rem">
+      <div id="modContent" class="modal-content modalContentM1 lightBackgroundM1" >
+        <div class="modal-header borderTRLR1 darkBackgroundM1 pb-1">
           <div class="fs_bdyTxt" style="min-width: 20px;max-width: max-content;padding: 4px;display:none;" id="currContainer">
           </div>
           <div style="top:5px;position:sticky;z-index:20;padding:10px 0;width:max-content;left:95%">
-            <button id="modalClose_def" type="button" class="close" data-dismiss="modal" style="margin-right:5px;display:block">X</button> 
+            <button id="modalClose_def" type="button" class="close" data-dismiss="modal" style="margin-right:5px;display:block;width: 55px;width: 55px;">
+              <svg style="fill:#9f00ff;  pointer-events: none;" width="100%" height="100%"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 512 512" xml:space="preserve">
+              <g>
+                <g>
+                  <polygon
+                    points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 512,452.922 315.076,256 		">
+                  </polygon>
+                </g>
+              </g>
+            </svg>
+            </button> 
               <button id="modalClose_back" type="button" class="close" data-dismiss="modal" style="margin-right:5px;display:none;width:53px;height:45px;padding:10px;fill:#0275d8">
                 <svg style="pointer-events:none" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
                 <g>
@@ -99,13 +111,51 @@
     </div>
   </div>
   <!-- Navbar row  starts-->
-  <nav id="fxTpNav" class="navbar navbar-expand-lg navbar-dark fixed-top" style="min-height: 35px; background: rgb(0, 0, 0); border-bottom:1px solid rgb(0, 0, 0);padding: 0.1rem 1rem;">
+  <nav id="fxTpNav" class="navbar navbar-expand-lg navbar-light fixed-top " style="min-height: 35px;background-color: #fff;">
     <div class="container">
       <div class="d_logoWrapper">
         <a id="fxTpBrnd" class="navbar-brand fs_resp_Sub_SL" href="#" style="padding: 0.1rem 0.5rem;">
           <!-- ICON - complete logo -->
           <div id="qSvg" style="position: relative;float: left;width:159.2927px;height:65px;max-height: 50px; top:5px;">
-            <svg fill="none" fill-rule="evenodd" stroke="black" stroke-width="0.501" stroke-linejoin="bevel"
+            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="30" viewBox="0 0 41 30" fill="none">
+              <g clip-path="url(#clip0_2826_363)">
+              <path d="M0 4C0 1.79086 1.79086 0 4 0H37C39.2091 0 41 1.79086 41 4V26C41 28.2091 39.2091 30 37 30H4C1.79086 30 0 28.2091 0 26V4Z" fill="black"/>
+              <path d="M13.0845 22.9551C13.092 22.9775 13.2043 23.0599 13.4214 23.2021L15.1621 24.4375C16.113 25.1113 16.9927 25.6579 17.8013 26.0771C18.6174 26.5039 19.4297 26.8333 20.2383 27.0654C21.0469 27.2975 21.8517 27.4136 22.6528 27.4136C22.9598 27.4136 23.3903 27.3761 23.9443 27.3013L23.9668 27.436C23.4951 27.6606 22.9336 27.8478 22.2822 27.9976C21.6309 28.1473 21.1405 28.2222 20.811 28.2222C19.6131 28.2222 18.0446 27.7804 16.1055 26.897C14.1663 26.0135 12.3395 24.8006 10.625 23.2583C8.14681 23.2583 6.21517 22.4797 4.83008 20.9224C3.45247 19.3576 2.76367 17.5981 2.76367 15.644C2.76367 14.1541 3.1193 12.6829 3.83057 11.2305C4.54932 9.77051 5.60872 8.56885 7.00879 7.62549C8.41634 6.68213 10.0897 6.21045 12.0288 6.21045C14.3573 6.21045 16.2552 6.92171 17.7227 8.34424C19.1976 9.75928 19.9351 11.5225 19.9351 13.6338C19.9351 15.7451 19.3511 17.6917 18.1831 19.4736C17.0226 21.248 15.3231 22.4085 13.0845 22.9551ZM11.9614 22.4048C13.0994 22.4048 14.2225 22.1016 15.3306 21.4951C16.4386 20.8812 17.3109 20.0389 17.9473 18.9683C18.5837 17.8976 18.9019 16.797 18.9019 15.6665C18.9019 14.0269 18.4564 12.5444 17.5654 11.2192C16.682 9.88656 15.5589 8.86458 14.1963 8.15332C12.8337 7.44206 11.5983 7.08643 10.4902 7.08643C8.85059 7.08643 7.36068 7.7041 6.02051 8.93945C4.68783 10.1748 4.02148 11.7096 4.02148 13.5439C4.02148 15.8724 4.83382 17.9313 6.4585 19.7207C8.09066 21.5101 9.92497 22.4048 11.9614 22.4048ZM32.4817 6.45752V6.62598C32.0175 6.57357 31.6058 6.80192 31.2464 7.31104C31.2389 7.31104 31.2277 7.32227 31.2127 7.34473C31.2052 7.36719 31.194 7.3859 31.179 7.40088L31.0892 7.52441C31.0517 7.56934 31.033 7.59928 31.033 7.61426L30.9207 7.72656L26.7093 13.6675L31.7518 20.9336C32.3058 21.7721 32.7288 22.3075 33.0208 22.5396C33.3128 22.7642 33.5936 22.8652 33.8631 22.8428V23H29.7527V22.8428C30.1046 22.8652 30.2806 22.7417 30.2806 22.4722C30.2806 22.255 30.1645 21.978 29.9324 21.6411L25.5413 15.3184L21.1053 21.5063C21.1053 21.5138 21.0192 21.6449 20.847 21.8994C20.6448 22.139 20.5438 22.3524 20.5438 22.5396C20.5438 22.7642 20.7309 22.8652 21.1053 22.8428V23H18.6346V22.8428C18.9939 22.8428 19.3084 22.7043 19.5779 22.4272L19.7688 22.2251L25.1258 14.7231L20.1844 7.5918C20.1844 7.48698 20.0421 7.29232 19.7576 7.00781C19.4731 6.72331 19.1549 6.59603 18.803 6.62598V6.45752H22.9695V6.62598C22.5203 6.62598 22.2957 6.74951 22.2957 6.99658C22.2957 7.17627 22.4342 7.46452 22.7112 7.86133L26.3274 13.061L30.2132 7.61426C30.2207 7.60677 30.2768 7.50195 30.3816 7.2998C30.4939 7.09766 30.5501 6.97038 30.5501 6.91797C30.5501 6.79069 30.5089 6.71208 30.4266 6.68213C30.3517 6.64469 30.202 6.62598 29.9773 6.62598V6.45752H32.4817ZM32.5064 8.00732L35.4713 6.16553H35.651V21.4839C35.651 22.0828 35.7333 22.4609 35.898 22.6182C36.0702 22.7679 36.4633 22.8428 37.0772 22.8428V23H32.4391V22.8428C32.7685 22.8428 33.0418 22.8203 33.2589 22.7754C33.476 22.723 33.6332 22.5845 33.7306 22.3599C33.8354 22.1353 33.8878 21.7871 33.8878 21.3154V8.95068C33.8878 8.62874 33.8578 8.37044 33.7979 8.17578C33.7455 7.98112 33.5995 7.88379 33.36 7.88379C33.1578 7.88379 32.8733 7.97738 32.5064 8.16455V8.00732Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_2826_363">
+              <path d="M0 4C0 1.79086 1.79086 0 4 0H37C39.2091 0 41 1.79086 41 4V26C41 28.2091 39.2091 30 37 30H4C1.79086 30 0 28.2091 0 26V4Z" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="103" height="30" viewBox="0 0 103 30" fill="none">
+              <rect width="103" height="30" fill="white"/>
+              <path d="M13.0845 22.9551C13.092 22.9775 13.2043 23.0599 13.4214 23.2021L15.1621 24.4375C16.113 25.1113 16.9927 25.6579 17.8013 26.0771C18.6174 26.5039 19.4297 26.8333 20.2383 27.0654C21.0469 27.2975 21.8517 27.4136 22.6528 27.4136C22.9598 27.4136 23.3903 27.3761 23.9443 27.3013L23.9668 27.436C23.4951 27.6606 22.9336 27.8478 22.2822 27.9976C21.6309 28.1473 21.1405 28.2222 20.811 28.2222C19.6131 28.2222 18.0446 27.7804 16.1055 26.897C14.1663 26.0135 12.3395 24.8006 10.625 23.2583C8.14681 23.2583 6.21517 22.4797 4.83008 20.9224C3.45247 19.3576 2.76367 17.5981 2.76367 15.644C2.76367 14.1541 3.1193 12.6829 3.83057 11.2305C4.54932 9.77051 5.60872 8.56885 7.00879 7.62549C8.41634 6.68213 10.0897 6.21045 12.0288 6.21045C14.3573 6.21045 16.2552 6.92171 17.7227 8.34424C19.1976 9.75928 19.9351 11.5225 19.9351 13.6338C19.9351 15.7451 19.3511 17.6917 18.1831 19.4736C17.0226 21.248 15.3231 22.4085 13.0845 22.9551ZM11.9614 22.4048C13.0994 22.4048 14.2225 22.1016 15.3306 21.4951C16.4386 20.8812 17.3109 20.0389 17.9473 18.9683C18.5837 17.8976 18.9019 16.797 18.9019 15.6665C18.9019 14.0269 18.4564 12.5444 17.5654 11.2192C16.682 9.88656 15.5589 8.86458 14.1963 8.15332C12.8337 7.44206 11.5983 7.08643 10.4902 7.08643C8.85059 7.08643 7.36068 7.7041 6.02051 8.93945C4.68783 10.1748 4.02148 11.7096 4.02148 13.5439C4.02148 15.8724 4.83382 17.9313 6.4585 19.7207C8.09066 21.5101 9.92497 22.4048 11.9614 22.4048ZM35.0086 23H31.8865V20.4507C30.2918 22.2251 28.3901 23.1123 26.1814 23.1123C24.5418 23.1123 23.2391 22.6519 22.2732 21.731C21.3149 20.8101 20.8357 19.5373 20.8357 17.9126V8.00732C20.8357 7.40837 20.7646 7.03027 20.6224 6.87305C20.4801 6.70833 20.1469 6.62598 19.6229 6.62598V6.45752H24.014V6.62598C23.5498 6.62598 23.2203 6.70085 23.0257 6.85059C22.8385 6.99284 22.7449 7.33724 22.7449 7.88379V16.9692C22.7449 18.8709 23.1904 20.2298 24.0813 21.0459C24.9723 21.8545 25.9868 22.2588 27.1248 22.2588C28.9142 22.2588 30.5014 21.4539 31.8865 19.8442V8.64746C31.8865 7.66667 31.8004 7.08643 31.6282 6.90674C31.456 6.71956 31.1865 6.62598 30.8196 6.62598H30.6624V6.45752H35.0086V6.62598C34.4695 6.65592 34.1289 6.74577 33.9866 6.89551C33.8519 7.04525 33.7845 7.32975 33.7845 7.74902V21.2256C33.7845 21.7572 33.8107 22.1053 33.8631 22.27C33.9155 22.4347 34.0203 22.5732 34.1775 22.6855C34.3423 22.7904 34.6193 22.8428 35.0086 22.8428V23ZM38.8517 6.45752V6.62598C38.6345 6.60352 38.3912 6.63721 38.1217 6.72705C37.8596 6.81689 37.7024 6.94792 37.65 7.12012C37.6051 7.29232 37.5826 7.70036 37.5826 8.34424V21.0459C37.5826 21.7347 37.6088 22.1577 37.6612 22.3149C37.7211 22.4647 37.8297 22.592 37.9869 22.6968C38.1516 22.7941 38.4399 22.8428 38.8517 22.8428V23H34.4381V22.8428C34.9921 22.8428 35.3365 22.738 35.4713 22.5283C35.6061 22.3112 35.6734 21.8245 35.6734 21.0684V8.49023C35.6734 7.7041 35.5986 7.19124 35.4488 6.95166C35.2991 6.70459 34.9622 6.59603 34.4381 6.62598V6.45752H38.8517ZM52.4652 7.28857L53.0829 9.04053H52.9257C51.3235 7.4458 49.4367 6.64844 47.2655 6.64844C45.0119 6.64844 43.1889 7.31852 41.7963 8.65869C40.4112 9.99886 39.7187 11.6198 39.7187 13.5215C39.7187 14.6969 40.0256 16.0483 40.6395 17.5757C41.261 19.103 42.238 20.3608 43.5707 21.3491C44.9034 22.3299 46.5168 22.8203 48.411 22.8203C49.6539 22.8203 50.8705 22.6219 52.0609 22.2251C53.2589 21.8208 54.1498 21.2817 54.7338 20.6079L54.8798 20.6528L53.723 22.4272C51.8513 22.8315 50.6347 23.0711 50.0731 23.146C49.5191 23.2209 48.7742 23.2583 47.8383 23.2583C44.3718 23.2583 41.8899 22.4572 40.3925 20.855C38.9026 19.2453 38.1576 17.3211 38.1576 15.0825C38.1576 13.5701 38.5395 12.1177 39.3031 10.7251C40.0743 9.32503 41.1824 8.22445 42.6273 7.42334C44.0723 6.61475 45.7232 6.21045 47.58 6.21045C48.5084 6.21045 49.3095 6.29655 49.9833 6.46875C50.6646 6.63346 51.2299 6.80566 51.6791 6.98535L52.4203 7.26611C52.4428 7.2736 52.4577 7.28109 52.4652 7.28857ZM53.4333 6.45752H58.1726V6.62598C57.656 6.60352 57.2928 6.68213 57.0832 6.86182C56.8736 7.03402 56.7687 7.49072 56.7687 8.23193V14.5771L66.5954 7.19873C66.7901 7.06396 66.8874 6.94043 66.8874 6.82812C66.8874 6.69336 66.6665 6.62598 66.2248 6.62598V6.45752H69.7961V6.62598C68.8977 6.64844 68.0217 6.97786 67.1682 7.61426L58.6105 14.0044L67.1457 20.4956C67.1532 20.5031 67.1644 20.5106 67.1794 20.5181C67.1944 20.5256 67.2056 20.5368 67.2131 20.5518C67.2281 20.5592 67.243 20.563 67.258 20.563C68.3811 21.4015 69.2495 21.993 69.8635 22.3374C70.4849 22.6743 71.0651 22.8428 71.6042 22.8428V23H65.9777V22.8428C66.4794 22.8428 66.7302 22.7866 66.7302 22.6743C66.7302 22.577 66.5243 22.3711 66.1125 22.0566L56.7687 14.9478V21.0908C56.7687 21.8096 56.8174 22.2513 56.9147 22.416C57.0196 22.5807 57.1543 22.7005 57.319 22.7754C57.4912 22.8428 57.7683 22.8652 58.1501 22.8428V23H53.4333V22.8428C54.0622 22.8727 54.4553 22.7791 54.6125 22.562C54.7772 22.3374 54.8596 21.8695 54.8596 21.1582V8.32178C54.8596 7.58805 54.7772 7.11263 54.6125 6.89551C54.4553 6.67839 54.0622 6.58854 53.4333 6.62598V6.45752ZM78.2324 6.6709L79.0186 8.7373L78.8838 8.75977C78.8838 8.75228 78.6742 8.53141 78.2549 8.09717C77.8431 7.66292 77.3677 7.32975 76.8286 7.09766C76.297 6.85807 75.6943 6.73828 75.0205 6.73828C73.89 6.73828 72.9915 7.06396 72.3252 7.71533C71.6663 8.35921 71.3369 9.13786 71.3369 10.0513C71.3369 10.6577 71.4904 11.1893 71.7974 11.646C72.1118 12.0952 72.7632 12.5145 73.7515 12.9038C75.451 13.4728 76.6115 13.9033 77.2329 14.1953C77.8618 14.4798 78.4645 14.9665 79.041 15.6553C79.625 16.3441 79.917 17.2275 79.917 18.3057C79.917 18.7549 79.8646 19.1854 79.7598 19.5972C79.6549 20.0015 79.4865 20.3945 79.2544 20.7764C79.0223 21.1507 78.7415 21.4951 78.4121 21.8096C78.0902 22.1165 77.7607 22.3524 77.4238 22.5171C77.0869 22.6743 76.5553 22.7941 75.8291 22.8765C75.1029 22.9588 74.6237 23 74.3916 23H69.978V18.1934H70.1465C70.1615 19.7881 70.5358 20.8999 71.2695 21.5288C72.0033 22.1577 73.145 22.4722 74.6948 22.4722C76.1024 22.4722 77.1693 22.139 77.8955 21.4727C78.6292 20.8063 78.9961 20.0052 78.9961 19.0693C78.9961 18.5003 78.8688 18.0174 78.6143 17.6206C78.3597 17.2163 78.0041 16.8644 77.5474 16.5649C77.0907 16.258 76.2259 15.8874 74.9531 15.4531C73.6878 15.0114 72.7969 14.6258 72.2803 14.2964C71.7712 13.9595 71.3444 13.4578 71 12.7915C70.6556 12.1177 70.4834 11.4326 70.4834 10.7363C70.4834 9.45605 70.9214 8.38167 71.7974 7.51318C72.6808 6.64469 73.8376 6.21045 75.2676 6.21045C75.8216 6.21045 76.4206 6.27409 77.0645 6.40137C77.7083 6.52865 78.0677 6.611 78.1426 6.64844C78.1725 6.66341 78.2025 6.6709 78.2324 6.6709ZM92.2054 6.45752V6.62598C91.7412 6.57357 91.3294 6.80192 90.97 7.31104C90.9625 7.31104 90.9513 7.32227 90.9363 7.34473C90.9288 7.36719 90.9176 7.3859 90.9026 7.40088L90.8128 7.52441C90.7754 7.56934 90.7566 7.59928 90.7566 7.61426L90.6443 7.72656L86.4329 13.6675L91.4754 20.9336C92.0294 21.7721 92.4524 22.3075 92.7444 22.5396C93.0364 22.7642 93.3172 22.8652 93.5867 22.8428V23H89.4764V22.8428C89.8283 22.8652 90.0042 22.7417 90.0042 22.4722C90.0042 22.255 89.8881 21.978 89.6561 21.6411L85.2649 15.3184L80.8289 21.5063C80.8289 21.5138 80.7428 21.6449 80.5706 21.8994C80.3685 22.139 80.2674 22.3524 80.2674 22.5396C80.2674 22.7642 80.4546 22.8652 80.8289 22.8428V23H78.3582V22.8428C78.7176 22.8428 79.032 22.7043 79.3016 22.4272L79.4925 22.2251L84.8494 14.7231L79.908 7.5918C79.908 7.48698 79.7658 7.29232 79.4812 7.00781C79.1967 6.72331 78.8785 6.59603 78.5267 6.62598V6.45752H82.6932V6.62598C82.2439 6.62598 82.0193 6.74951 82.0193 6.99658C82.0193 7.17627 82.1578 7.46452 82.4349 7.86133L86.0511 13.061L89.9368 7.61426C89.9443 7.60677 90.0005 7.50195 90.1053 7.2998C90.2176 7.09766 90.2737 6.97038 90.2737 6.91797C90.2737 6.79069 90.2325 6.71208 90.1502 6.68213C90.0753 6.64469 89.9256 6.62598 89.701 6.62598V6.45752H92.2054ZM92.2301 8.00732L95.1949 6.16553H95.3746V21.4839C95.3746 22.0828 95.457 22.4609 95.6217 22.6182C95.7939 22.7679 96.1869 22.8428 96.8009 22.8428V23H92.1627V22.8428C92.4921 22.8428 92.7654 22.8203 92.9825 22.7754C93.1996 22.723 93.3569 22.5845 93.4542 22.3599C93.559 22.1353 93.6114 21.7871 93.6114 21.3154V8.95068C93.6114 8.62874 93.5815 8.37044 93.5216 8.17578C93.4692 7.98112 93.3232 7.88379 93.0836 7.88379C92.8814 7.88379 92.5969 7.97738 92.2301 8.16455V8.00732Z" fill="black"/>
+              </svg>
+
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="128" height="40" viewBox="0 0 128 40" fill="none">
+              <text xml:space="preserve" transform="translate(359.294 399.195) scale(1 -1)" kerning="auto"
+                  font-size="15" stroke-linecap="round" font-style="italic" fill="#ffffff" stroke="none"
+                  stroke-width="0.321" stroke-linejoin="round" font-family="Archivo Narrow" font-weight="nprmal">
+                  <tspan x="0" y="0">Single.Page.Application.Xperience</tspan>
+                </text>
+              <rect width="128" height="40" fill="white"/>
+              <path d="M29.316 14.548L25.676 34.988H20.636L22.008 27.316L20.58 28.968C19.656 29.584 18.424 29.892 16.912 29.892C13.188 29.892 11.032 27.904 11.032 23.984C11.032 18.888 13.972 14.156 19.88 14.156C21.112 14.156 22.512 14.436 23.184 14.884L23.912 16.564L24.276 14.548H29.316ZM22.904 22.22L23.016 21.576C23.352 19.56 22.904 17.572 20.384 17.572C18.032 17.572 16.352 20.204 16.352 23.172C16.352 25.468 17.416 26.476 18.956 26.476C20.804 26.476 22.344 25.3 22.904 22.22ZM45.4919 14.548L42.8599 29.5H37.8199L38.2119 27.372L36.5319 29.024C35.4959 29.584 34.3759 29.892 33.0039 29.892C29.9519 29.892 28.4959 28.268 28.4959 26.056C28.4959 25.272 28.6079 24.432 28.8319 23.172L30.3719 14.548H35.4119L34.0679 22.052C33.8999 23.032 33.7879 23.844 33.7879 24.376C33.7879 25.636 34.2919 26.476 35.7759 26.476C37.3719 26.476 38.6319 24.88 39.2479 21.492L40.4519 14.548H45.4919ZM50.4667 8.472C51.8947 8.472 52.7627 9.256 52.7627 10.572C52.7627 11.916 51.8387 13.4 49.8507 13.4C48.4227 13.4 47.5547 12.616 47.5547 11.3C47.5547 9.928 48.5067 8.472 50.4667 8.472ZM49.2907 29.5H44.2507L46.9107 14.548H51.9507L49.2907 29.5ZM60.2958 14.268C65.0278 14.268 67.0998 16.872 67.0998 20.372H62.2278C62.2278 18.552 61.3318 17.684 59.9318 17.684C57.6638 17.684 56.3758 20.512 56.3758 23.536C56.3758 25.44 57.2718 26.476 58.4758 26.476C59.9038 26.476 60.9678 25.636 61.5278 24.012H66.4838C65.1398 27.876 62.4238 29.892 58.0838 29.892C54.0518 29.892 51.0558 27.988 51.0558 23.48C51.0558 18.244 54.7798 14.268 60.2958 14.268ZM77.2763 21.52L82.7923 29.5H76.6603L73.2723 23.9L71.7883 25.16L71.0323 29.5H65.9923L69.6323 8.92H74.6723L72.5723 20.792L78.9283 14.548H84.8363L77.2763 21.52ZM89.9218 14.268C94.2338 14.268 96.0258 16.312 96.1938 19.028H91.2658C91.1258 17.992 90.5938 17.404 89.7538 17.404C88.9698 17.404 88.4938 17.824 88.4938 18.44C88.4938 19.392 89.0258 19.756 91.5178 20.596C94.4578 21.604 95.6618 22.892 95.6618 25.132C95.6618 28.324 92.6658 30.06 88.5778 30.06C84.4618 30.06 81.8578 28.38 81.6898 25.02H86.6458C86.7858 26.392 87.6818 26.924 88.7458 26.924C89.7258 26.924 90.3978 26.504 90.3978 25.664C90.3978 24.796 89.7538 24.264 87.1498 23.34C84.7138 22.472 83.2578 21.52 83.2578 19.084C83.2578 16.508 85.5258 14.268 89.9218 14.268Z" fill="black"/>
+              <path d="M98.1509 26.5C97.9595 26.5 97.8638 26.4077 97.8638 26.2231C97.8638 26.0659 97.9492 25.9053 98.1201 25.7412L103.319 20.8911L98.2124 15.8154C98.0894 15.6924 98.0278 15.5659 98.0278 15.436C98.0278 15.2036 98.1372 15.0874 98.356 15.0874C98.4927 15.0874 98.6294 15.1558 98.7661 15.2925L103.852 20.3887L108.938 15.2925C109.075 15.1558 109.211 15.0874 109.348 15.0874C109.56 15.0874 109.666 15.2036 109.666 15.436C109.666 15.5728 109.608 15.6992 109.492 15.8154L104.385 20.8911L109.584 25.731C109.748 25.8882 109.83 26.0488 109.83 26.2129C109.83 26.4043 109.738 26.5 109.553 26.5C109.403 26.5 109.242 26.418 109.071 26.2539L103.852 21.3936L98.6328 26.2642C98.4688 26.4214 98.3081 26.5 98.1509 26.5ZM114.096 26.5C113.897 26.5 113.781 26.4248 113.747 26.2744C113.713 26.124 113.696 25.96 113.696 25.7822V15.7949H112.117C111.98 15.7949 111.836 15.7881 111.686 15.7744C111.542 15.7539 111.471 15.6616 111.471 15.4976C111.471 15.2856 111.546 15.1626 111.696 15.1284C111.854 15.0942 111.987 15.0771 112.096 15.0771H114.075C114.273 15.0771 114.383 15.1558 114.403 15.313C114.424 15.4702 114.434 15.6309 114.434 15.7949V25.7822C114.434 25.96 114.424 26.124 114.403 26.2744C114.383 26.4248 114.28 26.5 114.096 26.5Z" fill="black"/>
+              </svg> -->
+
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="91" height="40" viewBox="0 0 91 40" fill="none">
+                <rect width="91" height="40" fill="white"/>
+                <path d="M7.98 34.28C6.65467 34.28 5.42267 33.9627 4.284 33.328C3.164 32.6933 2.268 31.788 1.596 30.612C0.924 29.4173 0.588 27.9987 0.588 26.356C0.588 24.7133 0.924 23.304 1.596 22.128C2.268 20.9333 3.164 20.0187 4.284 19.384C5.42267 18.7307 6.65467 18.404 7.98 18.404C9.39867 18.404 10.528 18.684 11.368 19.244C12.2267 19.804 12.8427 20.672 13.216 21.848C13.608 23.0053 13.804 24.508 13.804 26.356C13.804 28.1667 13.5987 29.66 13.188 30.836C12.7773 31.9933 12.1427 32.8613 11.284 33.44C10.4253 34 9.324 34.28 7.98 34.28ZM9.492 29.352C9.95867 29.352 10.3787 29.24 10.752 29.016C11.1253 28.792 11.424 28.456 11.648 28.008C11.872 27.56 11.984 27.0093 11.984 26.356C11.984 25.684 11.872 25.124 11.648 24.676C11.424 24.228 11.1253 23.892 10.752 23.668C10.3787 23.444 9.95867 23.332 9.492 23.332C9.02533 23.332 8.60533 23.444 8.232 23.668C7.85867 23.892 7.56 24.228 7.336 24.676C7.112 25.124 7 25.684 7 26.356C7 27.0093 7.112 27.56 7.336 28.008C7.56 28.456 7.85867 28.792 8.232 29.016C8.60533 29.24 9.02533 29.352 9.492 29.352ZM11.872 39.432V31.956L12.152 26.356L12.18 20.756V18.684H18.2V39.432H11.872Z" fill="#B84B4B" fill-opacity="0.74"/>
+                <path d="M22.0695 34.28C20.8561 34.28 19.7548 34.0373 18.7655 33.552C17.7948 33.048 17.0295 32.2733 16.4695 31.228C15.9095 30.164 15.6295 28.8013 15.6295 27.14V18.684H21.9575V26.048C21.9575 27.1307 22.1348 27.8867 22.4895 28.316C22.8441 28.7453 23.3295 28.96 23.9455 28.96C24.3188 28.96 24.6641 28.8667 24.9815 28.68C25.3175 28.4747 25.5881 28.148 25.7935 27.7C25.9988 27.2333 26.1015 26.6267 26.1015 25.88V18.684H32.4295V34H26.4095V29.576L27.6135 30.78C27.0721 31.9747 26.2975 32.8613 25.2895 33.44C24.3001 34 23.2268 34.28 22.0695 34.28Z" fill="#8D7938" fill-opacity="0.79"/>
+                <path d="M29.9163 34V18.684H36.2443V34H29.9163ZM33.0803 17.452C31.9229 17.452 30.9989 17.144 30.3083 16.528C29.6176 15.912 29.2723 15.1467 29.2723 14.232C29.2723 13.3173 29.6176 12.552 30.3083 11.936C30.9989 11.32 31.9229 11.012 33.0803 11.012C34.2376 11.012 35.1616 11.3013 35.8523 11.88C36.5429 12.4587 36.8883 13.2053 36.8883 14.12C36.8883 15.0907 36.5429 15.8933 35.8523 16.528C35.1616 17.144 34.2376 17.452 33.0803 17.452Z" fill="#3F6B24" fill-opacity="0.92"/>
+                <path d="M41.9611 34.28C40.2064 34.28 38.6477 33.944 37.2851 33.272C35.9224 32.6 34.8491 31.6667 34.0651 30.472C33.2997 29.2587 32.9171 27.8773 32.9171 26.328C32.9171 24.7787 33.2997 23.4067 34.0651 22.212C34.8491 21.0173 35.9224 20.084 37.2851 19.412C38.6477 18.74 40.2064 18.404 41.9611 18.404C43.8277 18.404 45.4237 18.8053 46.7491 19.608C48.0744 20.4107 48.9891 21.5213 49.4931 22.94L44.5931 25.348C44.2757 24.6387 43.8837 24.1253 43.4171 23.808C42.9691 23.4907 42.4744 23.332 41.9331 23.332C41.4664 23.332 41.0277 23.444 40.6171 23.668C40.2251 23.892 39.9077 24.228 39.6651 24.676C39.4411 25.1053 39.3291 25.656 39.3291 26.328C39.3291 27 39.4411 27.56 39.6651 28.008C39.9077 28.456 40.2251 28.792 40.6171 29.016C41.0277 29.24 41.4664 29.352 41.9331 29.352C42.4744 29.352 42.9691 29.1933 43.4171 28.876C43.8837 28.5587 44.2757 28.0453 44.5931 27.336L49.4931 29.744C48.9891 31.1627 48.0744 32.2733 46.7491 33.076C45.4237 33.8787 43.8277 34.28 41.9611 34.28Z" fill="#EF08D8" fill-opacity="0.83"/>
+                <path d="M50.9276 31.48L51.0676 24.032L56.3596 18.684H63.8356L56.8356 26.02L53.6716 28.568L50.9276 31.48ZM45.6356 34V13.224H51.9636V34H45.6356ZM56.6956 34L52.4956 28.68L56.3876 23.892L64.3396 34H56.6956Z" fill="#3206B7" fill-opacity="0.87"/>
+                <path d="M65.7217 34.28C64.415 34.28 63.127 34.14 61.8577 33.86C60.5884 33.58 59.5617 33.216 58.7777 32.768L60.5137 28.596C61.2417 29.0253 62.0817 29.3613 63.0337 29.604C64.0044 29.8467 64.947 29.968 65.8617 29.968C66.627 29.968 67.1404 29.9027 67.4017 29.772C67.6817 29.6413 67.8217 29.464 67.8217 29.24C67.8217 29.016 67.663 28.8573 67.3457 28.764C67.0284 28.652 66.6084 28.568 66.0857 28.512C65.563 28.456 64.9844 28.3907 64.3497 28.316C63.7337 28.2227 63.1084 28.092 62.4737 27.924C61.839 27.756 61.2604 27.504 60.7377 27.168C60.215 26.832 59.795 26.384 59.4777 25.824C59.1604 25.2453 59.0017 24.5173 59.0017 23.64C59.0017 22.6693 59.291 21.792 59.8697 21.008C60.467 20.224 61.3444 19.5987 62.5017 19.132C63.6777 18.6467 65.1244 18.404 66.8417 18.404C67.9617 18.404 69.0817 18.5067 70.2017 18.712C71.3217 18.9173 72.283 19.2347 73.0857 19.664L71.3497 23.836C70.5657 23.4067 69.791 23.1173 69.0257 22.968C68.279 22.8 67.579 22.716 66.9257 22.716C66.123 22.716 65.5724 22.7907 65.2737 22.94C64.9937 23.0893 64.8537 23.2573 64.8537 23.444C64.8537 23.668 65.0124 23.836 65.3297 23.948C65.647 24.06 66.067 24.144 66.5897 24.2C67.1124 24.256 67.6817 24.3307 68.2977 24.424C68.9324 24.4987 69.5577 24.6293 70.1737 24.816C70.8084 24.984 71.387 25.236 71.9097 25.572C72.4324 25.908 72.8524 26.3653 73.1697 26.944C73.487 27.504 73.6457 28.2227 73.6457 29.1C73.6457 30.0147 73.3564 30.8733 72.7777 31.676C72.199 32.46 71.3217 33.0947 70.1457 33.58C68.9697 34.0467 67.495 34.28 65.7217 34.28Z" fill="#4A86F5" fill-opacity="0.84"/>
+                <path d="M75.4937 34C75.3205 34 75.2339 33.9165 75.2339 33.7495C75.2339 33.6073 75.3112 33.4619 75.4658 33.3135L80.1694 28.9253L75.5493 24.333C75.438 24.2217 75.3823 24.1073 75.3823 23.9897C75.3823 23.7795 75.4813 23.6743 75.6792 23.6743C75.8029 23.6743 75.9266 23.7362 76.0503 23.8599L80.6519 28.4707L85.2534 23.8599C85.3771 23.7362 85.5008 23.6743 85.6245 23.6743C85.8162 23.6743 85.9121 23.7795 85.9121 23.9897C85.9121 24.1134 85.8595 24.2279 85.7544 24.333L81.1343 28.9253L85.8379 33.3042C85.9863 33.4465 86.0605 33.5918 86.0605 33.7402C86.0605 33.9134 85.9771 34 85.8101 34C85.674 34 85.5286 33.9258 85.374 33.7773L80.6519 29.3799L75.9297 33.7866C75.7812 33.9289 75.6359 34 75.4937 34ZM89.9199 34C89.7406 34 89.6354 33.932 89.6045 33.7959C89.5736 33.6598 89.5581 33.5114 89.5581 33.3506V24.3145H88.1294C88.0057 24.3145 87.8758 24.3083 87.7397 24.2959C87.6099 24.2773 87.5449 24.1938 87.5449 24.0454C87.5449 23.8537 87.613 23.7424 87.749 23.7114C87.8913 23.6805 88.0119 23.665 88.1108 23.665H89.9014C90.0807 23.665 90.1797 23.7362 90.1982 23.8784C90.2168 24.0207 90.2261 24.166 90.2261 24.3145V33.3506C90.2261 33.5114 90.2168 33.6598 90.1982 33.7959C90.1797 33.932 90.0869 34 89.9199 34Z" fill="black"/>
+                </svg> -->
+
+            <!-- <svg fill="none" fill-rule="evenodd" stroke="black" stroke-width="0.501" stroke-linejoin="bevel"
               stroke-miterlimit="10" font-family="Times New Roman" font-size="16" style="font-variant-ligatures:none"
               xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1"
               overflow="visible" width="100%" height="100%" viewBox="360.192 -457.901 186.62 76.151">
@@ -113,24 +163,24 @@
               </defs>
               <g id="Layer 1" transform="scale(1 -1)">
                 <text xml:space="preserve" transform="translate(359.294 399.195) scale(1 -1)" kerning="auto"
-                  font-size="20" stroke-linecap="round" font-style="italic" fill="#666666" stroke="none"
-                  stroke-width="0.321" stroke-linejoin="round" font-family="Archivo Narrow" font-weight="bold">
-                  <tspan x="0" y="0">Choose. Design. Go.</tspan>
+                  font-size="15" stroke-linecap="round" font-style="italic" fill="#ffffff" stroke="none"
+                  stroke-width="0.321" stroke-linejoin="round" font-family="Archivo Narrow" font-weight="nprmal">
+                  <tspan x="0" y="0">Single.Page.Application.Xperience</tspan>
                 </text>
-                <path d="M 431.459,420.532 L 495.435,420.532" fill="none" stroke-linecap="round" stroke="#4dff09"
-                  stroke-width="0.5" stroke-linejoin="round"></path>
+                <path d="M 431.459,420.532 L 495.435,420.532" fill="#FFF" stroke-linecap="round" stroke="#FFF"
+                  stroke-width="1.5" stroke-linejoin="round"></path>
                 <text xml:space="preserve" transform="translate(407.362 425.504) scale(1 -1)" kerning="auto"
                   stroke-linecap="round" stroke="none" stroke-width="0.445" font-family="Impact" stroke-linejoin="round"
                   font-size="28">
-                  <tspan x="0" y="0" fill="#de1f1f">QuicksX</tspan>
+                  <tspan x="0" y="0" fill="#fff">SPAX</tspan>
                 </text>
                
               </g>
-            </svg>
+            </svg> -->
           </div>
         </a>
       </div> <!-- Logo Wrapper  -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- NAVRBAR BTNs on right side  -->
@@ -198,7 +248,7 @@
                   <text xml:space="preserve" transform="translate(407.362 425.504) scale(1 -1)" kerning="auto"
                     stroke-linecap="round" stroke="none" stroke-width="0.445" font-family="Impact"
                     stroke-linejoin="round" font-size="28">
-                    <tspan x="0" y="0" fill="#de1f1f">Quicks.io</tspan>
+                    <tspan x="0" y="0" fill="#de1f1f">Quicksx1.io</tspan>
                   </text>
                   <g id="Group" stroke-linecap="round" stroke="#ffffff">
                     <path
@@ -253,10 +303,10 @@
               <div class="mx-auto justify-content-center" style="background: rgb(0, 0, 0);display: inherit;width: 95vw;">
                 <!-- p & inheret ELSE btn(s) gets stack one below other -->
                 <button slide="contentCustomEx" class="btn fs_moreItemMenuBtn btn-link product_CatBtn fs_font-Montserrat" type="button" data-toggle="collapse" ontrue="noCollapse" data-target="#customGal" aria-expanded="true" aria-controls="customGal">
-                  <!-- CUSTOMIZATION --> STANDARD WEBSITE
+                  <!-- CUSTOMIZATION --> STANDARD DESIGN
                 </button>
                 <button slide="contentAutoEx,contentAutoEx1" class="btn fs_moreItemMenuBtn btn-link product_CatBtn fs_font-Montserrat collapsed" type="button" ontrue="noCollapse" data-toggle="collapse" data-target="#autoGenGal" aria-expanded="false" aria-controls="autoGenGal">
-                  PREMIUM WEBSITE
+                  PREMIUM DESIGN
                 </button>
               </div>
             </div>
@@ -274,20 +324,20 @@
                 </div>
                 <div id="contentCustomEx" class="row d_customExBdy mx-auto mb-2  fs_flexNoWrapOverflow flex-nowrap pb-3" style="padding-top:35px; text-align: center;margin:0px auto;">
                   <div class="col-xl-6 col-lg-6 col-sm-6 col-md-8 col-12 fs_carousalItem_H_M d_carousal_item">
-                    <div class="abImageHeader abImageFull" style="top: 27px; right:10px; background-image:url(./images/personalTrainer_WA.png);"></div>
+                    <div class="abImageHeader abImageFull" style="top: 27px; right:10px; background-image:url(img/s11.png);"></div>
                     <div class="fs_captionHor fs_captionBackground fs_resp_Sub_Sub_SL px-2 mx-auto" style="width:max-content;">
                       ORIGINAL
                       <br>
-                      <span class="fs_card_bdyTxt">For personal trainer.</span>
+                      <!-- <span class="fs_card_bdyTxt">For personal trainer.</span> -->
                     </div>
                   </div>
                   <!-- fs_sliderColUP for portrait device column should overlap in slider -->
                   <div class="col-xl-6 col-lg-6  col-sm-6 col-md-8  col-12 fs_carousalItem_H_M d_carousal_item">
-                    <div class="abImageHeader abImageFull" style="top: 27px;  left:10px; background-image:url(./images/dubaiTour_WA_5.png);"></div>
+                    <div class="abImageHeader abImageFull" style="top: 27px;  left:10px; background-image:url(img/s12.png);"></div>
                     <div class="fs_captionHor fs_captionBackground fs_resp_Sub_Sub_SL px-2 mx-auto text-red" style="width:max-content;">
                       CUSTOMIZED
                       <br>
-                      <span class="fs_card_bdyTxt">Adapted for Dubai travel.</span>
+                      <!-- <span class="fs_card_bdyTxt">Adapted for Dubai travel.</span> -->
                       </div>
                   </div>
                 </div> <!-- row 1 end -->
@@ -307,14 +357,14 @@
                 </div>
                 <div id="contentAutoEx" class="row mx-auto  fs_flexNoWrapOverflow flex-nowrap pb-3" style="text-align: center;margin:0px auto;">
                   <div class="col-xl-6 col-lg-6 col-sm-6 col-md-8 col-12 fs_carousalItem_H_M d_carousal_item">
-                    <div class="abImageHeader abImageFull" style="right:10px; background-image:url(./images/AdBreakfast_sectionL.png);"></div>
+                    <div class="abImageHeader abImageFull" style="right:10px; background-image:url(img/AdBreakfast_sectionL.png);"></div>
                     <div class="fs_captionHor fs_captionBackground fs_resp_Sub_Sub_SL px-2 mx-auto" style="width:max-content;top:26px;">
                       Upcoming...
                     </div>
                   </div>
                   <!-- fs_sliderColUP for portrait device column should overlap in slider -->
                   <div class="col-xl-6 col-lg-6  col-sm-6 col-md-8  col-12 fs_carousalItem_H_M d_carousal_item">
-                    <div class="abImageHeader abImageFull" style="left:10px; background-image:url(./images/AdBreakfast_sectionR.png);"></div>
+                    <div class="abImageHeader abImageFull" style="left:10px; background-image:url(img/AdBreakfast_sectionR.png);"></div>
                     <div class="fs_captionHor fs_captionBackground fs_resp_Sub_Sub_SL px-2 mx-auto" style="width:max-content;top:26px;">
                       Upcoming...
                     </div>
@@ -327,18 +377,18 @@
         </div>
         <!-- Customization and automation ENDS -->
         <!-- Business only         -->
-        <div class="row mt-2 py-3 fontW7" style="background-image: linear-gradient(rgb(23 24 59 / 80%),rgb(23 24 59 / 80%));">
+        <div class="d-none row mt-2 py-3 fontW7" style="background-image: linear-gradient(rgb(23 24 59 / 80%),rgb(23 24 59 / 80%));">
           <div class="col-12 d-block text-center font-Montserrat mb-1 fs_resp_Sub_Sub_SL" style="color: rgb(253, 237, 4); transition: font-size 100ms ease 0s;">
             BUSINESS 
             <span style="font-family:satisfy;color:white;">only</span>
           </div>
         </div>
-        <div class="row mt-2 mx-auto py-3">
+        <div class="d-none row mt-2 mx-auto py-3">
           <div class="col-12 mx-auto fs_relative fs_resp_Sub_SL fontW7" style="margin: 0px auto;top:-10px; color: #444453;border-bottom: 1px solid #6ce1f3;width:max-content;">
             Branded personalized digital cards
           </div>
         </div>
-        <div class="row mt-2 mx-auto py-3">
+        <div class="d-none row mt-2 mx-auto py-3">
           <div class="col-xl-10 col-lg-10 col-sm-10 col-md-12 col-12 mx-auto fs_relative text-19" style="margin: 0px auto;top:-10px; color: #444453;">
             <span class="fontW7">Birthdays, seasons greeting or one-off events.</span>
              Send WhatsApp personalised cards to each individual whether employee, students or business partners. 
@@ -351,7 +401,7 @@
           </div>
         </div>
 
-        <div class="row mt-3" style="height:auto;">
+        <div class="d-none row mt-3" style="height:auto;">
           <div class="col-lg-4 col-sm-4 col-md-12 col-12 mx-auto  fs_carousalItem_H_M d_carousal_item">
             <div class="abImageHeader abImageFull" style="right:10px; background-image:url(./images/HNY_QuicksSchool_Kinza_2023_WA.png);"></div>
           </div>
@@ -370,29 +420,33 @@
 
 
   <!-- SECTION HEADER start ----->
-  <section id="header" class="container-fluid s_LightBg px-0" qx_id="productTheme_spa-8_header" style="margin-bottom: 1px;">
-    <div id="home" class="row no-gutters" style="margin-top:62px;">
+  <section id="header" class="container-fluid s_LightBg  darkBackgroundM2 darkT3Color px-0" qx_id="productTheme_spa-8_header" style="margin-bottom: -1px;">
+    <div id="home" class="row no-gutters" style="margin-top:56px;">
       <div id="headerCarousal" class="carousel slide col-12 " data-ride="carousel" data-interval="6000" data-pause="hover" data-touch="true">
-        <div class="abImageHeader abImagePosition" style="background-color:#000,url('./img/Capture.PNG.');background-repeat: repeat;">
-        </div>
-        <div class="row sliderCall2Action" style="height:50px; bottom: 100px;"> 
-          <button type="button" class="btn text-20 call2Action c2Apremium radius50p py-2 col-lg-3 col-md-4 col-sm-5 col-12 mt-sm-2 mb-sm-0 fontW5 mr-1 mb-1">
-            <a href="#exploreDesigns" style="color:white !important;">Order a design</a> 
+        <div class="abImageHeader abImagePosition" style="background-image: url(img/Capture.png);background-repeat: repeat;">
+        </div> 
+        <div class="abImageHeader abImagePosition whG1" style="">
+        </div> 
+        <!-- call2actionBtn -->
+        <div class="row no-gutters sliderCall2Action" style="height:50px; bottom: 100px;"> 
+          <button type="button" class="btn btnSt01 darkBackgroundM1  call2Action c2Apremium radius50p py-2 col-lg-3 col-md-4 col-sm-5 col-12 mt-sm-2 mb-sm-0 fontW5  mb-2">
+            <a class="fff" href="#exploreDesigns">Order a design</a> 
           </button> 
-            <button id="i-navItemsMoreC2A" type="button" status="collapsed" class="collapsed text-20 mt-sm-2 btn call2Action c2Apremium radius50p py-2 col-lg-3 col-md-4 col-sm-5 col-12 ml-sm-1 fontW5 ml-0">
+            <button id="i-navItemsMoreC2A" type="button" status="collapsed" class="collapsed btnSt01 mt-sm-2 btn darkT3Color Bfff call2Action c2Apremium radius50p py-2 col-lg-3 col-md-4 col-sm-5 col-12  fontW5 ml-0">
               Know More
           </button> 
         </div>
-       
-        <div id="headerText" class="row d_topCaption mx-auto" style="opacity: 1; transition: opacity 1000ms;">
-          <div class="col-12 mx-auto fs_relative py-2" style="color: white;">
-            <div style="color: #ffffff;text-shadow: 1px 1px #cdcbaa;" class="row fs_resp_SL pt-3 justify-content-center text-center font-Montserrat"> 
-              QuickX is a global branding and UX design agency
+       <!-- headerTxt -->
+        <div id="headerText" class="container d_topCaption mx-auto " style="opacity: 1; transition: opacity 1000ms;">
+          <div class="col-md-6 col-12 mx-auto fs_relative p-0">
+            <div class="row no-gutters fs_resp_SL pt-5 justify-content-start text-left font-Montserrat fontW6 " style="font-family: Roboto, Arial, Georgia, serif !important;
+    text-transform: capitalize;"> 
+              quicks<span class="font-Montserrat fontW9 tShadow1" style="font-family: Montserrat, Arial, Georgia, serif !important;color: #080337;">X1</span> is a global branding and UX design agency
             </div>
-            <div class="row mx-auto">
-              <div class="col-xl-6 col-lg-8 col-md-10 col-12 mx-auto mt-2 fs_resp_Sub_Sub_SL justify-content-center text-center" style="color:#fff;">
+            <div class="row no-gutters justify-content-start text-left mt-3 realW1//">
+              <div class="fontW5 font-Montserrat sHdEl// fs_resp_Sub_SL" style="color: #080337;">
                 Real world, ready to use  
-                <span style="font-family:Rubik;font-weight:500;text-transform: uppercase;color:#77ff00;">designs.</span>
+                <span class="" >designs.</span>
               </div>
             </div>
           </div>
@@ -407,35 +461,35 @@
   <!-- SECTION HEADER ends -->
 
   <!-- SECTION explore products [This is beautified from production] ----->
-  <section id="exploreDesigns" class="container-fluid fs_LightBg px-0 fs_relative fs_basicSection" style="overflow-y:auto">
+  <section id="exploreDesigns" class="container-fluid darkBackgroundM2 darkT3Color px-0 fs_relative fs_basicSection" style="overflow-y:auto">
     <div class="fs_container">
       <div class="fs_containerMargin">
         <!-- section hd -->
         <div class="row">
-          <div id="explTxt" class="col-12 fs_resp_HL a-center">
+          <div id="explTxt" class="col-12 fs_resp_HL a-center fontW9 tShadow1">
             Explore
           </div>
         </div>
-        <div id="sticked" class="container-fluid pb-1" style="background-color:#000">
+        <div id="sticked" class="container-fluid px-0">
           <!-- section sub-hd -->
-          <div class="row" style="background-image:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8));overflow:visible">
-            <div id="stickyHL" class="col-12 d-block text-center font-Montserrat fs_resp_Sub_SL mb-1" style="color:#fff">
-              Designs for real world use.
+          <div class="row" style="overflow:visible">
+            <div id="stickyHL" class="col-12 d-block text-center font-Montserrat fs_resp_Sub_SL">
+              Designs for real world use websites.
             </div>
-            <div class="col-12 d-block mx-auto text-center text-16 fontW7" style="color:ivory">
+            <div class="col-12 d-block mx-auto text-center text-16 fontW7 ">
               Just choose and order.
             </div>
           </div>
           <!-- ends -->
-          <ul id="productCatsCarousal_li" list="personalTab,bizTab" class="nav nav-pills justify-content-center row">
-            <li data-target="#productCatsCarousal" mysliderbody="#personalTab" data-slide-to="0" class="col-lg-2 col-sm-2 col-6 active">
-              <button id="personalTab_btn" type="button" class="btn product_CatBtn text-15" aria-expanded="true" style="pointer-events:none">
-                STANDARD WEBSITES
+          <ul id="productCatsCarousal_li" list="personalTab,bizTab" class="nav nav-pills justify-content-center row no-gutters">
+            <li data-target="#productCatsCarousal" mysliderbody="#personalTab" data-slide-to="0" class="col-lg-2 col-sm-2 col-4 justify-content-center active">
+              <button id="personalTab_btn" type="button" class="btn product_CatBtn btnSt01 radius50p" aria-expanded="true" style="pointer-events:none">
+                NEW
             </button>
             </li>
-            <li data-target="#productCatsCarousal" mysliderbody="#bizTab" data-slide-to="1" class="ml-md-4 col-lg-2 col-sm-2 col-6">
-              <button id="bizTab_btn" type="button" class="btn btn-light product_CatBtn text-15" aria-expanded="false" style="pointer-events:none">
-                PREMIUM WEBSITES
+            <li data-target="#productCatsCarousal" mysliderbody="#bizTab" data-slide-to="1" class=" col-lg-2 col-sm-2 col-4 ml-2 justify-content-center">
+              <button id="bizTab_btn" type="button" class="btn  product_CatBtn btnSt01 radius50p" aria-expanded="false" style="pointer-events:none">
+                ALL
             </button>
             </li>
           </ul>
@@ -448,29 +502,30 @@
             <!-- cards -->
             <div class="card-columns quicks-card-columns" id="personalTabCont" expcat="personal">
               <!-- one -->
-              <div url="personalTrainer" iddata="P0" class="card fs_borderM fsC_none_brdr" style="background-color: rgb(250, 250, 238); overflow: hidden;">
-                <div class="card-img-top fs_borderM  fs_relative fs_cardImageLarge" style="background-color: rgb(32, 48, 58);">
-                  <div id="img_P0" clone="true" modal-key="pd_1665055417644lkp1~0" class="abImageHeader abImageFull modalButton d_Img" style="background-image: url(./img/1st-itterationPT-5.png);">
+              <div url="personalTrainer" iddata="P0" class="card fsC_none_brdr" style="background-color: rgb(250, 250, 238); overflow: hidden;">
+                <div class="card-img-top fsC_none_brdr  fs_relative fs_cardImageLarge" style="background-color: rgb(32, 48, 58);">
+                  <div id="img_P0" clone="true" modal-key="pd_1665055417644lkp1~0" class="abImageHeader abImageFull modalButton d_Img" style="background-image: url(img/bCatB29.png);">
                    </div>
                 </div>
-                <div class="a-center  fs_DarkFont p-2" act="insert PD description" style="height:10px;"> </div>
+                <!-- <div class="a-center  fs_DarkFont p-2" act="insert PD description" style="height:10px;"> </div> -->
               </div>
               <!-- two -->
-              <div url="personalTrainerBdyBuild" iddata="P1" class="card fs_borderM fsC_none_brdr" style="background-color: rgb(238, 243, 250); overflow: hidden;">
-                <div class="card-img-top fs_borderM  fs_relative fs_cardImageSmall" style="background-color: rgb(113, 117, 98);">
-                  <div id="img_P1" clone="true" modal-key="pd_1665064938618xx1~1" class="abImageHeader abImageFull modalButton d_Img" style="background-image: url(&quot;../../images/personalTrainerBdyBuild.png&quot;);"> 
+              <div url="personalTrainerBdyBuild" iddata="P1" class="card fsC_none_brdr" style="background-color: rgb(238, 243, 250); overflow: hidden;">
+                <div class="card-img-top fsC_none_brdr  fs_relative fs_cardImageSmall" style="background-color: rgb(113, 117, 98);">
+                  <div id="img_P1" clone="true" modal-key="pd_1665064938618xx1~1" class="abImageHeader abImageFull modalButton d_Img" style="background-image: url(img/bCatB38.png);"> 
                   </div>
                 </div>
-                <div class="a-center  fs_DarkFont p-2" act="insert PD description" style="height:10px;"> </div>
+                <!-- <div class="a-center  fs_DarkFont p-2" act="insert PD description" style="height:10px;"> </div> -->
               </div>
               <!-- three -->
-              <div url="HP_BirthDKinza" iddata="P2" class="card fs_borderM fsC_none_brdr" style="background-color: rgb(242, 242, 210); overflow: hidden;">
-                <div class="card-img-top fs_borderM  fs_relative fs_cardImageSmallest" style="background-color: rgb(89, 110, 115);">
-                  <div id="img_P2" clone="true" modal-key="pd_166515400145523v1~2" class="abImageHeader abImageFull modalButton d_Img" style="background-image: url(&quot;../../images/HP_BirthDKinza.png&quot;);"> 
+              <div url="HP_BirthDKinza" iddata="P2" class="card  fsC_none_brdr" style="background-color: rgb(242, 242, 210); overflow: hidden;">
+                <div class="card-img-top fsC_none_brdr  fs_relative fs_cardImageSmallest" style="background-color: rgb(89, 110, 115);">
+                  <div id="img_P2" clone="true" modal-key="pd_166515400145523v1~2" class="abImageHeader abImageFull modalButton d_Img" style="background-image: url(img/bCatB39.png);"> 
                   </div>
                 </div>
-                <div class="a-center  fs_DarkFont p-2" act="insert PD description" style="height:10px;"> </div>
+                <!-- <div class="a-center  fs_DarkFont p-2" act="insert PD description" style="height:10px;"> </div> -->
               </div>
+          
               
             </div>
           </div>
@@ -492,20 +547,27 @@
   <!-- SECTION EXPLORE PRODUCTS ends -->
 
   <!-- SECTION FOOTER STARTS ----->
-  <section id="contact" class="container-fluid px-0 mt-1" qx_id="productTheme_spa-8_footer_form"
-    style="background: #000;">
+  <section id="contact" class="container-fluid px-0  darkBackgroundM2 darkT3Color" qx_id="productTheme_spa-8_footer_form"
+   >
     <!--  BS container-->
     <div class="container">
       <!--  contentBox-->
       <div class="fs_containerMargin my-0">
+         <!-- section hd -->
+         <div class="row">
+          <div id="explTxt" class="col-12 fs_resp_HL a-center fontW9 tShadow1">
+            Let's talk
+          </div>
+        </div>
         <div class="row ">
-          <div class="col-sm-6 col-12">
-            <div class="fs_lcAlign fs_rtVertLine_noXS">
+          <div class=" col-12 text-center">
+            <div class="">
               <!-- Social media icons -->
-              <div class="">
+              <div class="justify-content-center">
                 <!--facebook idcon  -->
                 <button type="button" class="btn btn-secondary bg-transparent fsC_none_brdr"
-                  onclick="window.open('https://www.facebookee.com/profile.php?id=101472689283605','_blank')">
+                  onclick="window.open('https://www.facebook.com/profile.php?id=61552214371660','_blank')">
+                  
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 40 40"
                     xml:space="preserve" style="pointer-events: none;">
@@ -515,7 +577,7 @@
                       }
 
                       .st1 {
-                        fill: #FFFFFF;
+                        fill: #212529;
                       }
                     </style>
                     <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-277.375" y1="406.6018"
@@ -533,9 +595,9 @@
                 </button>
                 <!-- twitter icon -->
                 <button type="button" class="btn btn-secondary bg-transparent fsC_none_brdr"
-                  onclick="window.open('https://twitterrr.com/quicksio','_blank')">
+                  onclick="window.open('https://x.com/home','_blank')">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-twitter"
-                    viewBox="0 0 15 15" style="fill: #fff;pointer-events: none;">
+                    viewBox="0 0 15 15" style="fill: #212529;pointer-events: none;">
                     <path
                       d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
                     </path>
@@ -543,8 +605,8 @@
                 </button>
                 <!-- instagram icon -->
                 <button type="button" class="btn btn-secondary bg-transparent fsC_none_brdr"
-                  onclick="window.open('https://www.instagrammm.com/quicks.io/','_blank')">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-instagram"
+                  onclick="window.open('https://www.instagram.com/quicks_x1/','_blank')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#212529" class="bi bi-instagram"
                     viewBox="0 0 16 16" style="pointer-events: none;">
                     <path
                       d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
@@ -554,13 +616,13 @@
               </div><!-- social media icon  -->
             </div> <!-- fs_lcAlign -->
           </div>
-          <div class="col-sm-6 col-12">
-            <div class="fs_rcAlign" style="margin-top: 12px;">
+          <div class=" col-12 text-center">
+            <div class="" style="margin-top: 12px;margin-bottom: 12px;">
               <!-- contact email ID -->
-              <div class="d_positional fs_rcAlign" style="width: max-content;">
+              <div class="d_positional " style="">
                 <div class=""
-                  style="width:max-content; font-size: 1rem;position: relative;font-weight: 500; color: #ffffff; padding: 0px 37px;">
-                  design@quickx.io
+                  style=" font-size: 1rem;position: relative;font-weight: 400; padding: 0px 37px;">
+                  design@quicksx1.com
                 </div>
               </div> <!-- positional div -->
               <!-- contact me email ID -->
@@ -573,30 +635,75 @@
   </section>
   <!-- Footer important info and copyright -->
   <!-- position:sticky;bottom:0;  -->
-  <section id="footer" class="container-fluid px-0 pt-2"
-    style="background-color: #000;box-shadow: rgb(0 0 0 / 20%) 0px 0px 8px;position: sticky;bottom: 0px;z-index: 1030;border-top: 1px solid #808080;">
+  <section id="footer" class="container-fluid px-0 pt-2 fff darkBackgroundM1" style="position: sticky;bottom: 0px;z-index: 1030;">
     <div class="container" style="background:transparent;">
       <div class="fs_containerMargin my-0">
-        <div class="row text-center mx-auto" style="width: max-content;">
+        <div class="row text-center mb-2 mx-auto" style="width: max-content;">
 
           <!-- important no refund -->
           <!-- <div q_id="POL_NOREFUND" modal-key="others" class="col px-2 mx-2 float-left btmMenuItem modalButton "
             style="color:rgb(247, 113, 113);width:max-content;max-width: max-content;">No refund</div> -->
           <!-- Bottom links  -->
-          <div q_id="FQ" modal-key="others" class="col px-2 mx-2 float-left btmMenuItem modalButton "
-            style="width:max-content;max-width: max-content;">FAQ</div>
-          <div q_id="PRC" modal-key="others" class="col px-2 mx-2 float-left btmMenuItem modalButton "
-            style="width:max-content;max-width: max-content;">Pricing</div>
-          <div q_id="HIW" modal-key="others" class="col px-2 mx-2 float-left btmMenuItem modalButton "
-            style="width:max-content;max-width: max-content;">How it works?</div>
+        <div class="card bg-transparent fsC_none_brdr " style="align-items: center;">
+          <!-- <svg fill="#ffffff" width="20px" height="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55.417 55.417" xml:space="preserve" stroke="#ffffff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"> <g> 
+              <path d="M39.708,0h-24c-6.341,0-11.5,5.159-11.5,11.5v32.417c0,6.341,5.159,11.5,11.5,11.5h24c6.341,0,11.5-5.159,11.5-11.5V11.5 C51.208,5.159,46.049,0,39.708,0z M48.208,43.917c0,4.687-3.812,8.5-8.5,8.5h-9.557c0.213-0.142,0.424-0.289,0.623-0.466 c1-0.889,1.5-2.112,1.5-3.667c0-1.4-0.478-2.578-1.434-3.534c-0.955-0.956-2.133-1.434-3.533-1.434c-1.423,0-2.622,0.478-3.6,1.434 c-0.979,0.956-1.468,2.134-1.468,3.534c0,1.577,0.506,2.806,1.518,3.684c0.197,0.171,0.406,0.312,0.617,0.45h-8.667 c-4.687,0-8.5-3.812-8.5-8.5V11.5c0-4.687,3.813-8.5,8.5-8.5h9.484c-2.278,0.293-4.343,0.937-6.185,1.945 c-2.601,1.423-4.578,3.217-5.934,5.384s-2.033,4.307-2.033,6.418c0,1.023,0.427,1.972,1.282,2.85 c0.856,0.878,1.906,1.317,3.15,1.317c2.112,0,3.545-1.256,4.301-3.767c0.8-2.4,1.778-4.217,2.934-5.451 c1.156-1.233,2.957-1.851,5.401-1.851c2.088,0,3.793,0.612,5.118,1.834c1.321,1.222,1.982,2.723,1.982,4.5 c0,0.911-0.217,1.756-0.65,2.534c-0.433,0.778-0.967,1.484-1.6,2.117c-0.635,0.633-1.661,1.572-3.084,2.817 c-1.622,1.422-2.911,2.65-3.867,3.684c-0.955,1.034-1.723,2.233-2.3,3.601c-0.579,1.366-0.867,2.982-0.867,4.851 c0,1.489,0.395,2.61,1.183,3.366c0.789,0.756,1.762,1.134,2.918,1.134c2.223,0,3.544-1.156,3.966-3.468 c0.246-1.088,0.429-1.85,0.551-2.283s0.295-0.867,0.518-1.301c0.223-0.433,0.562-0.91,1.018-1.433 c0.455-0.522,1.062-1.128,1.816-1.817c2.733-2.444,4.629-4.184,5.685-5.216c1.055-1.033,1.967-2.261,2.733-3.684 s1.148-3.079,1.148-4.968c0-2.4-0.672-4.623-2.018-6.668c-1.344-2.044-3.25-3.661-5.717-4.85c-1.707-0.823-3.609-1.342-5.682-1.595 h8.747c4.687,0,8.5,3.813,8.5,8.5L48.208,43.917L48.208,43.917z">
+
+              </path> 
+            </g> 
+            </g>
+          </svg> -->
+          <div q_id="FQ" modal-key="others" class="float-left btmMenuItem   modalButton " style="">
+            FAQ
+          </div>
+        </div>
+        <div class="card bg-transparent fsC_none_brdr ml-3 " style="align-items: center;">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="#ffffff">
+
+            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+            
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <g id="SVGRepo_iconCarrier">
+            
+            <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+            
+            <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h3m5 0h-5m5 3h-2m-6.003 0H14m-3-3c1 0 3 .6 3 3m-1 7-5.003-4H11c1 0 3-.6 3-3"/>
+            
+            </g>
+            
+            </svg> -->
+          <div q_id="PRC" modal-key="others" class="float-left btmMenuItem   modalButton " style="width:max-content;max-width: max-content;">
+            Pricing
+          </div>
+        </div>
+        <div class="card bg-transparent fsC_none_brdr ml-3 " style="align-items: center;">
+          <!-- <svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 600 600" version="1.1" id="svg9724" sodipodi:docname="settings2.svg" inkscape:version="1.2.2 (1:1.2.2+202212051550+b0a8486541)" width="20px" height="20px"  fill="#ffffff" stroke="#ffffff">
+
+            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+            
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <g id="SVGRepo_iconCarrier"> <defs id="defs9728"/> <sodipodi:namedview id="namedview9726" pagecolor="#ffffff" bordercolor="#ffffff" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#ffffff" showgrid="true" inkscape:zoom="0.59480855" inkscape:cx="44.55215" inkscape:cy="332.03961" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="0" inkscape:window-y="1080" inkscape:window-maximized="1" inkscape:current-layer="svg9724" showguides="true"> <inkscape:grid type="xygrid" id="grid9972" originx="0" originy="0"/> <sodipodi:guide position="40,400" orientation="0,-1" id="guide292" inkscape:locked="false"/> <sodipodi:guide position="90,200" orientation="0,-1" id="guide294" inkscape:locked="false"/> <sodipodi:guide position="230,500" orientation="0,-1" id="guide296" inkscape:locked="false"/> <sodipodi:guide position="210,300" orientation="0,-1" id="guide298" inkscape:locked="false"/> <sodipodi:guide position="230,100" orientation="0,-1" id="guide300" inkscape:locked="false"/> </sodipodi:namedview> <g id="g10449" transform="matrix(0.95173205,0,0,0.95115787,13.901174,12.168794)" style="stroke-width:1.05103"> <path id="path356" style="color:#ffffff;fill:#ffffff;stroke-linecap:round;-inkscape-stroke:none" d="M 447.70881 -12.781343 A 42.041451 42.041451 0 0 0 405.66786 29.260344 L 405.66786 50.301721 L 27.434765 50.301721 A 42.041302 42.041302 0 0 0 -14.606185 92.341354 A 42.041302 42.041302 0 0 0 27.434765 134.38304 L 405.66786 134.38304 L 405.66786 155.44906 A 42.041451 42.041451 0 0 0 447.70881 197.49075 A 42.041451 42.041451 0 0 0 489.74976 155.44906 L 489.74976 134.38304 L 573.78036 134.38304 A 42.041302 42.041302 0 0 0 615.82336 92.341354 A 42.041302 42.041302 0 0 0 573.78036 50.301721 L 489.74976 50.301721 L 489.74976 29.260344 A 42.041451 42.041451 0 0 0 447.70881 -12.781343 z M 143.0012 197.48869 A 42.041451 42.041451 0 0 0 100.9582 239.53038 L 100.9582 260.5697 L 27.447078 260.5697 A 42.041302 42.041302 0 0 0 -14.593872 302.61139 A 42.041302 42.041302 0 0 0 27.447078 344.65308 L 100.9582 344.65308 L 100.9582 365.7191 A 42.041451 42.041451 0 0 0 143.0012 407.76078 A 42.041451 42.041451 0 0 0 185.04215 365.7191 L 185.04215 344.65308 L 573.79472 344.65308 A 42.041302 42.041302 0 0 0 615.83567 302.61139 A 42.041302 42.041302 0 0 0 573.79472 260.5697 L 185.04215 260.5697 L 185.04215 239.53038 A 42.041451 42.041451 0 0 0 143.0012 197.48869 z M 279.59427 407.76078 A 42.041451 42.041451 0 0 0 237.55332 449.80042 L 237.55332 470.83974 L 27.447078 470.83974 A 42.041302 42.041302 0 0 0 -14.593872 512.88143 A 42.041302 42.041302 0 0 0 27.447078 554.92106 L 237.55332 554.92106 L 237.55332 575.98913 A 42.041451 42.041451 0 0 0 279.59427 618.02877 A 42.041451 42.041451 0 0 0 321.63522 575.98913 L 321.63522 554.92106 L 573.79472 554.92106 A 42.041302 42.041302 0 0 0 615.83567 512.88143 A 42.041302 42.041302 0 0 0 573.79472 470.83974 L 321.63522 470.83974 L 321.63522 449.80042 A 42.041451 42.041451 0 0 0 279.59427 407.76078 z "/> </g> </g>
+            
+            </svg> -->
+          <div q_id="HIW" modal-key="others" class="float-left btmMenuItem   modalButton " style="width:max-content;max-width: max-content;">
+            How it works?
+          </div>
+          </div>
         </div>
         <div class="row text-center mt-1 mx-auto">
-          <div class="mx-auto" style="font-size: 0.7rem;color: #fff;">Copyright 2025 Quickx.io</div>
+          <div class="mx-auto" style="font-size: 0.7rem;color: #fff;">Copyright 2025 Quicksx1.com</div>
         </div>
       </div>
     </div>
 
   </section>
+
+
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () =>
